@@ -1,0 +1,86 @@
+body
+{
+background-image: url("images/tlo.jpg");
+margin: 0;
+font-family: 'Lato', sans-serif;
+font-size: 20px;
+}
+
+#navbar
+{
+	width: 100%;
+	background-color: white;
+	height: 50px;
+	text-align: center;
+	border-bottom: dotted blue 1px;
+}
+
+#logo
+{
+	font-size: 40px;
+	color: blue;
+	float: left;
+	border: dashed 2px blue;
+}
+
+#navbar ol
+{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	float: left;
+	line-height: 200%;
+}
+
+#navbar ol li
+{
+	display: block;
+	float: left;
+	padding: 10px;
+	font-size: 25px;
+}
+
+#navbar ol a
+{
+	list-style-type: none;
+	color:black;
+}
+
+#navbar ol li:hover
+{
+	background-color: blue;
+}
+
+#title
+{
+	clear: both;
+	color: white;
+	font-size: 40px;
+	text-align: center;
+}
+
+#lista ol li
+{
+	text-align: center;
+	list-style-type: none;
+}
+
+#lista ol li a
+{
+	font-size: 30px;
+	color: white;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+#lista ol li a:hover
+{
+	color: red;
+	font-size: 32px;
+}
+
+#delete
+{
+	text-align: center;
+	color: red;
+}

@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div id="title">{{ object.title }}</div>
+<p style="text-align: center;">{{ object.content }}</p>
+
+<form id="delete" action="./delete" method="get">
+	<p1> Delete post <input type="submit" value="Yes" /></p1>
+</form>
+{% endblock %}
