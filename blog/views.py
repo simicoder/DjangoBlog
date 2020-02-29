@@ -2,6 +2,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 
 from django.urls import reverse
 
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 from django.views.generic import (
 	DetailView,
 	ListView,
@@ -20,24 +22,23 @@ from django.conf import settings
 
 from django.contrib.auth.decorators import login_required
 
-# @login_required
-class ArticleCreateView(CreateView):
+class ArticleCreateView(LoginRequiredMixin, CreateView):
 	template_name = 'blog/article_create.html'
 	form_class = ArticleModelForm
 	queryset = Article.objects.all()
 
-class ArticleListView(ListView):
+class ArticleListView(LoginRequiredMixin, ListView):
 	template_name = 'blog/article_list.html'
 	queryset = Article.objects.all()
 
-class ArticleDetailView(DetailView):
+class ArticleDetailView(LoginRequiredMixin, DetailView):
 	template_name = 'blog/article_detail.html'
 
 	def get_object(self):
 		id_ = self.kwargs.get("id")
 		return get_object_or_404(Article, id=id_)
 
-class ArticleUpdateView(UpdateView):
+class ArticleUpdateView(LoginRequiredMixin, UpdateView):
 	template_name = 'blog/article_create.html'
 	form_class = ArticleModelForm
 
@@ -48,7 +49,7 @@ class ArticleUpdateView(UpdateView):
 	def form_valid(self, form):
 		return super().form_valid(form)
 
-class ArticleDeleteView(DeleteView):
+class ArticleDeleteView(LoginRequiredMixin, DeleteView):
 	template_name = 'blog/article_delete.html'
 
 	def get_object(self):
