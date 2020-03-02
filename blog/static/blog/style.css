@@ -103,3 +103,12 @@ label
 {
 	color: #6DDCBD;
 }
+
+#password_reset a
+{
+	float: right;
+	margin-top: 25px;
+	text-decoration:none;
+	color:red;
+	padding-right: 10px;
+}
