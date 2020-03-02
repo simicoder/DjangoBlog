@@ -20,7 +20,7 @@ font-size: 20px;
 	font-size: 40px;
 	color: white;
 	float: left;
-	border: dashed 2px blue;
+	border: dashed 2px white;
 }
 
 #navbar ol
@@ -36,8 +36,22 @@ font-size: 20px;
 {
 	display: block;
 	float: left;
-	padding: 10px;
+	padding: 5px;
 	font-size: 25px;
+}
+
+.login
+{
+	height: 30px;
+    float:right;
+    color:white;
+}
+
+.login a
+{
+    text-decoration: none;
+    color: green;
+    font-size: 25px;
 }
 
 #navbar ol a

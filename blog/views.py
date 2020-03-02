@@ -22,7 +22,7 @@ from django.conf import settings
 
 from django.contrib.auth.decorators import login_required
 
-class ArticleCreateView(LoginRequiredMixin, CreateView):
+class ArticleCreateView(CreateView):
 	template_name = 'blog/article_create.html'
 	form_class = ArticleModelForm
 	queryset = Article.objects.all()

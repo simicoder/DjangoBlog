@@ -20,6 +20,13 @@
 		<a href="/"><li>Home</li></a>
 		<a href="/posts"><li>Posts</li></a>
 	</ol>
+	<div class="login">
+			{% if user.is_authenticated %}
+                <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+            {% else %}
+                <a href="{% url 'login' %}">Login</a>
+            {% endif %}
+	</div>
 </div>
 
 {% block content %}
