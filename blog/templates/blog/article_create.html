@@ -4,7 +4,7 @@
 {% if user.is_authenticated %}
 <form action="." method="POST" align="center">{% csrf_token %}
 	{{ form.as_p }}
-	<input type="submit" value="Save">
+	<input type="submit" value="Public">
 </form>
 {% else %}
 	<p align="center">You must be logged in to add post</p>

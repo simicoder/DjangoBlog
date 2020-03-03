@@ -22,9 +22,9 @@
 	</ol>
 	<div class="login">
 			{% if user.is_authenticated %}
-                <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+                <p class="top-menu">Hello {{ user.username }} <a href="{% url 'logout' %}">Log out</a> </p>
             {% else %}
-                <a href="{% url 'login' %}">Login</a>
+                <p><a href="{% url 'login' %}">Login</a></p>
             {% endif %}
 	</div>
 

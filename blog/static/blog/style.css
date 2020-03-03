@@ -50,7 +50,7 @@ font-size: 20px;
 .login a
 {
     text-decoration: none;
-    color: green;
+    color: red;
     font-size: 25px;
 }
 
@@ -101,7 +101,7 @@ font-size: 20px;
 
 label
 {
-	color: #6DDCBD;
+	color: white;
 }
 
 #password_reset a
@@ -111,4 +111,28 @@ label
 	text-decoration:none;
 	color:red;
 	padding-right: 10px;
+}
+
+input[type=text]
+{
+    border: 2px blue solid;
+    background-color: #798cd0
+}
+
+textarea
+{
+	background-color: #798cd0;
+	border: 2px blue solid;
+}
+
+input[type=submit]
+{
+	border: 2px blue solid;
+	background-color: #55ca8a;
+}
+
+input[type=password]
+{
+	background-color: #798cd0;
+	border: 2px blue solid;
 }
